@@ -1,102 +1,234 @@
+/* General Styling */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0px;
-    font-size: 1.5vw;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    background-color: #f9f9f9;
 }
 
-#logo {
-    margin: 0px;
-    padding: 8px;
-    font-family: "Fredoka One", sans-serif;
-    width: 16%;
-    text-shadow: 
-    1px 1px 0px black, /* bottom-right shadow */
-    -1px 1px 0px black, /* bottom-left shadow */
-    1px -1px 0px black, /* top-right shadow */
-    -1px -1px 0px black; /* top-left shadow */
+h1, h2, h3 {
+    font-family: 'Courier New', Courier, monospace;
+    color: #ff6392;
 }
 
-cite > a {
-    display: inline-block;
-    width: 100px;
-    height: 50px;
-}
-
-ul {
-    margin: 0px;
-}
-
-body > header {
-    background-color: orange;
-    color: white;
+/* Nav Bar/ Header */
+header {
+    background-color: #ffb3c6;
     display: flex;
-    height: 15vh;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-around;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px white;
 }
 
-#nav-ul {
-    display: flex;
+header.nav-logo h1 {
+    font-size: 2em;
+    font-family: 'Pacifico', cursive;
+    color: #ffffff;
 }
 
-#nav-ul > li {
-    padding: 8px;
-    margin: 16px;
-}
-
-body > header > nav > ul {
+header nav ul {
     list-style: none;
-    text-decoration: none;
-}
-
-.navbutton {
-    color: white;
-    text-decoration: none;
-    padding: 12px;
-    border: 1px solid white;
-}
-
-body > main article {
-    width: 70%;
-    margin: auto;
-}
-
-#main-content {
     display: flex;
-    justify-content: space-around;
+    gap: 20px;
 }
 
-#main-content > div {
-    width: 70%;
+header nav ul li {
+    font-size: 1.2rem;
 }
 
-form {
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #ff6392;
+}
+
+/* About Us Section */
+.about {
+    padding: 40px 20px;
+    background-color: #fff0f5;
+}
+
+.about-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-images {
+    display: flex;
+    gap: 20px;
+    flex: 2;
+}
+
+.about-images img {
+    width: 48%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    flex: 1;
+    padding-left: 40px;
+}
+
+.about-text h2 {
+    font-size: 2.5em;
+    color: #ff66a3;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-h2 {
+.about-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 0 auto;
+}
+
+/* Recipes Section */
+.recipes {
+    padding: 40px 20px;
+}
+
+.recipes h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #ff66a3;
+    margin-bottom: 20px;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.recipe-card {
+    background-color: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
     text-align: center;
 }
 
-body > footer {
-    background-color: orange;
-    display: flex;
+.recipe-card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #eee;
 }
 
-img {
-    border-radius: 100%;
+.recipe-card h3 {
+    color: #ff66a3;
+    margin: 15px 0;
 }
 
-#footer-ul {
-    display: flex;
+.recipe-card p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.recipe-card h4 {
+    margin-top: 20px;
+    color: #ff66a3;
+}
+
+.recipe-card ul {
     list-style: none;
+    padding: 0;
 }
 
-#footer-ul > div > li {
-    margin-left: 12px;
+.recipe-card ul li {
+    margin: 5px 0;
 }
 
-#footer-ul > div > li > a{
+.recipe-card ol {
+    padding-left: 20px;
+}
+
+/* Top Recipes Section */
+#top-recipes {
+    background-color: #ffebf0;
+    padding: 40px 20px;
+}
+
+#top-recipes h2 {
+    font-size: 2.5em;
+    color: #ff66a3;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#top-recipes .recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    color: #ff66a3;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.contact a {
+    color: #ff66a3;
+}
+
+/* Footer */
+footer {
+    background-color: #ffb3c6;
+    text-align: center;
+    padding: 20px;
+}
+
+footer nav {
+    margin-bottom: 15px;
+}
+
+footer nav a {
+    font-size: 1.2em;
+    color: #ffffff;
     text-decoration: none;
+    margin: 0 15px;
+}
+
+footer p {
+    color: #fff;
+}
+
+/* Scroll-to-Top Button */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff66a3;
     color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
 }
